@@ -1,5 +1,7 @@
 Contentcreator::Application.routes.draw do
   get "welcome/index"
+  get '/home' => 'home#index', :as => :home
+  get '/myblog' => 'myblog#index', :as => :myblog
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
