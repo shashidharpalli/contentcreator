@@ -10,6 +10,10 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
+
+//= require jquery-1.11.1.min
+//= require jquery.dataTables.min
 //= require jquery
 //= require jquery_ujs
+//= require local_time
 //= require_tree .
