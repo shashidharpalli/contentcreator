@@ -1,5 +1,9 @@
 
 Contentcreator::Application.routes.draw do
+  resources :authors
+  resources :articles do
+    resources :comments
+  end
   get "welcome/index"
   #####get '/home' => 'home#index', :as => :home
   #####get '/myblog' => 'myblog#index', :as => :myblog
