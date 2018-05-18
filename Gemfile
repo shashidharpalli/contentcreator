@@ -35,8 +35,7 @@ group :development, :test do
   #####Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'better_errors'
-end
-group :development do
+  gem 'sqlite3'
   #####Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
   #####Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
@@ -45,8 +44,9 @@ end
 #####rails_12factor precompiles the assets and causes a bunch of "*.css.scssc: can't dump anonymous class" errors. 
 group :production do
   gem 'rails_12factor'
-  gem 'thin'
+  gem 'puma'
 end
 gem 'will_paginate_mongoid'
 gem 'mongo'
 gem 'devise'
+gem 'foreman'
