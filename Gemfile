@@ -1,54 +1,53 @@
+
 source 'https://rubygems.org'
 
-ruby '2.1.3'
-gem 'rails', '3.2.16'
-
-# rails_12factor precompiles the assets and causes a bunch of "*.css.scssc: can't dump anonymous class" errors. 
+ruby '2.2.3'
+#####Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'rails', '4.2.6'
+#####Use sqlite3 as the database for Active Record
+#####gem 'sqlite3'
+gem 'mongoid'
+gem 'bson_ext'
+gem 'platform-api'
+#####Use SCSS for stylesheets
+gem 'sass-rails', '~> 5.0'
+#####Use Uglifier as compressor for JavaScript assets
+gem 'uglifier', '>= 1.3.0'
+#####Use CoffeeScript for .coffee assets and views
+gem 'coffee-rails', '~> 4.1.0'
+#####See https://github.com/rails/execjs#readme for more supported runtimes
+#####gem 'therubyracer', platforms: :ruby
+#####Use jquery as the JavaScript library
+gem 'jquery-rails'
+#####Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
+gem 'turbolinks'
+#####Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+gem 'jbuilder', '~> 2.0'
+#####bundle exec rake doc:rails generates the API under doc/api.
+gem 'sdoc', '~> 0.4.0', group: :doc
+#####Use ActiveModel has_secure_password
+#####gem 'bcrypt', '~> 3.1.7'
+#####Use Unicorn as the app server
+#####gem 'unicorn'
+#####Use Capistrano for deployment
+#####gem 'capistrano-rails', group: :development
+group :development, :test do
+  #####Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug'
+  gem 'better_errors'
+end
+group :development do
+  #####Access an IRB console on exception pages or by using <%= console %> in views
+  gem 'web-console', '~> 2.0'
+  #####Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'spring'
+end
+#####rails_12factor precompiles the assets and causes a bunch of "*.css.scssc: can't dump anonymous class" errors. 
 group :production do
   gem 'rails_12factor'
   gem 'thin'
 end
-# this is apparently due to sass 3.3 (see http://stackoverflow.com/questions/20578956/sass-error-in-rails-app-on-heroku-cant-dump-anonymous-class)
-gem "sass", "~> 3.4.22"
-
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'uglifier', '>= 1.0.3'
-end
-
-gem 'jquery-rails'
-gem 'mongoid'
-gem 'bson_ext'
-gem 'heroku-api'
 gem 'will_paginate_mongoid'
 gem 'mongo'
-gem 'bson'
 gem 'local_time'
 gem 'devise'
-
-group :development do
-  gem 'better_errors'
-  gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :mri_21, :rbx]
-  gem 'quiet_assets'
-  gem 'rails_layout'
-end
-
-
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'
