@@ -15,5 +15,4 @@
 //= require jquery.dataTables.min
 //= require jquery
 //= require jquery_ujs
-//= require local_time
 //= require_tree .
